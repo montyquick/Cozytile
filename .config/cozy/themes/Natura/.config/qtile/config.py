@@ -20,7 +20,7 @@ from libqtile.dgroups import simple_key_binder
 from time import sleep
 
 mod = "mod4"
-terminal = "alacritty"
+terminal = "kitty"
 
 # █▄▀ █▀▀ █▄█ █▄▄ █ █▄░█ █▀▄ █▀
 # █░█ ██▄ ░█░ █▄█ █ █░▀█ █▄▀ ▄█
@@ -164,8 +164,7 @@ widget_defaults = dict(
     fontsize=12,
     padding=3,
 )
-extension_defaults = [ widget_defaults.copy()
-        ]
+extension_defaults = widget_defaults.copy()
 
 
 

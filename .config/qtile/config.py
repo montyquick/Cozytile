@@ -20,7 +20,7 @@ from libqtile.dgroups import simple_key_binder
 from time import sleep
 
 mod = "mod4"
-terminal = "alacritty"
+terminal = "kitty"
 
 # █▄▀ █▀▀ █▄█ █▄▄ █ █▄░█ █▀▄ █▀
 # █░█ ██▄ ░█░ █▄█ █ █░▀█ █▄▀ ▄█
@@ -163,8 +163,7 @@ widget_defaults = dict(
     fontsize=12,
     padding=3,
 )
-extension_defaults = [ widget_defaults.copy()
-        ]
+extension_defaults = widget_defaults.copy()
 
 
 
@@ -514,8 +513,8 @@ import subprocess
 # stuff
 @hook.subscribe.startup_once
 def autostart_once():
-    subprocess.run('~/.config/qtile/autostart_once.sh')# path to my script, under my user directory
-    subprocess.call([home])
+    home = os.path.expanduser('~/.config/qtile/autostart_once.sh') # path to my script, under my user directory
+    subprocess.Popen([home])
 
 auto_fullscreen = True
 focus_on_window_activation = "smart"
