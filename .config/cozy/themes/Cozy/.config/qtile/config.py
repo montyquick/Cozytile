@@ -513,8 +513,8 @@ import subprocess
 # stuff
 @hook.subscribe.startup_once
 def autostart_once():
-    subprocess.run('~/.config/qtile/autostart_once.sh')# path to my script, under my user directory
-    subprocess.call([home])
+    home = os.path.expanduser('~/.config/qtile/autostart_once.sh')# path to my script, under my user directory
+    subprocess.Popen([home])
 
 auto_fullscreen = True
 focus_on_window_activation = "smart"
