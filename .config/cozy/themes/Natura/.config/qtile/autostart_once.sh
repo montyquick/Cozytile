@@ -1,9 +1,9 @@
 #!/bin/bash
 
 # Apply wallpaper using wal
-wal -i ~/Wallpaper/claudio-testa-FrlCwXwbwkk-unsplash.jpg &&
+wal -i ~/.config/cozy/wallpaper/claudio-testa-FrlCwXwbwkk-unsplash.jpg &&
 
 # Start picom
-picom --config ~/.config/picom/picom.conf &
+picom --config ~/.config/picom/picom.conf --experimental-backend &
 
 
