@@ -6,8 +6,6 @@
     "logo": {
          "type": "builtin",
          "source": "arch",
-         "width": 28,
-         "height": 12,
 	 "color": {
 	   "2": "blue"
 	 }
@@ -16,10 +14,10 @@
         "separator": "  "
     },
     "modules": [
-        {
-            "type": "custom", // SoftwareStart
-            "format": "├─────────── \u001b[1mSoftware Information\u001b[0m ───────────┤"
-        },
+	{
+	    "type": "custom",
+            "format": "┌─────────── \u001b[1mSystem Information\u001b[0m ───────────┐" // `\u001b` is `\033`, or `\e`
+	},
         {
             "type": "title",
             "key": "  ",
@@ -107,8 +105,48 @@
             "format": "{4}" // ssid
         },
         {
+            "type": "custom", // SoftwareStart
+            "format": "├─────────── \u001b[1mHotkey Information\u001b[0m ───────────┤"
+	},
+	{
+	    "type": "shell",
+            "key": "  ",
+	    "keyColor": "white",
+	    "format": "Mod+Enter kitty"
+	},
+	{
+	    "type": "shell",
+            "key": "  ",
+	    "keyColor": "white",
+	    "format": "Mod+B firefox"
+	},
+	{
+            "type": "shell",
+            "key": "  󱓞",
+	    "keyColor": "white",
+	    "format": "Mod+R rofi"
+	},
+	{
+            "type": "shell",
+            "key": "  ",
+	    "KeyColor": "white",
+	    "format": "Mod+E thunar"
+	},
+	{
+            "type": "shell",
+            "key": "  󰔎",
+	    "keyColor": "white",
+	    "format": "Mod+T theme changer"
+	},
+	{
+	    "type": "shell",
+	    "key": "  ",
+	    "keyColor": "white",
+	    "format": "Mod+C close current"
+	},
+        {
             "type": "custom", // InformationEnd
-            "format": "└────────────────────────────────────────────┘"
+            "format": "└──────────────────────────────────────────┘"
         },
         {
             "type": "colors",
